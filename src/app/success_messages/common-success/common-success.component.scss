@@ -1,0 +1,102 @@
+    h1 {
+      color: #88B04B;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-weight: 900;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #404F5E;
+      font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+      font-size:20px;
+      margin: 0;
+    }
+  i {
+    color: #9ABC66;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left:-15px;
+  }
+  .card {
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    background-color: #F8FAF5;
+    text-align: center;
+  }
+  
+  .success-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .success-container img {
+    width: 150px; /* Adjust the size as needed */
+  }
+  
+//   .button-container {
+//     margin-top: 20px;
+//   }
+  
+//   .btn-rounded {
+//     border-radius: 20px;
+//   }
+
+//   .btn-back {
+//     background-color: #007bff;
+//     color: #fff;
+//     border: none;
+//     border-radius: 5px;
+//     padding: 10px 20px;
+//     font-size: 16px;
+// }
+
+// .btn-back:hover {
+//     background-color: #0056b3;
+// }
+
+// /* Style for the Save button */
+.btn-save {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: #1e7e34;
+}
+
+.btn-back {
+  background-color: #007bff;
+  color: #fff; /* Text color is white */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.btn-back:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+  
+  /* Additional styles as needed */
+  

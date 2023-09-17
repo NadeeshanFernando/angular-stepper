@@ -1,0 +1,136 @@
+<form role="form">
+  <div class="card-body" style="margin-top: -3%;">
+    <section class="content">
+      <div class="container-fluid">
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-sm-6">
+            <!-- general form elements -->
+            <div>
+
+              <div>
+
+
+                <fieldset>
+                  <legend class="card-header" style="color: black;">ACS</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.acs" id="acs" name="acs" type="checkbox" />
+                    <label for="acs">ACS</label>
+                  </div>
+                  <div class="inputGroup-text">
+                    <label for="acs_replacement_id">ACS, Replacement User ID:</label>
+                    <input type="text" [(ngModel)]="employee.acs_replacement_id" id="acs_replacement_id"
+                      name="acs_replacement_id" />
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend class="card-header" style="color: black;">IMS</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.ims" id="ims" name="ims" type="checkbox" />
+                    <label for="ims">IMS</label>
+                  </div>
+                  <div class="inputGroup-text">
+                    <label for="ims_user_role_details">IMS, User Role Details:</label>
+                    <input type="text" [(ngModel)]="employee.ims_user_role_details" id="ims_user_role_details"
+                      name="ims_user_role_details" />
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend class="card-header" style="color: black;">DMS</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.dms_motor" id="dms_motor" name="dms_motor" type="checkbox" />
+                    <label for="dms_motor">DMS Motor</label>
+                  </div>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.dms_non_motor" id="dms_non_motor" name="dms_non_motor"
+                      type="checkbox" />
+                    <label for="dms_non_motor">DMS Non-Motor</label>
+                  </div>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.dms_old" id="dms_old" name="dms_old" type="checkbox" />
+                    <label for="dms_old">DMS Old</label>
+                  </div>
+                </fieldset>
+
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div>
+
+              <div>
+
+                <fieldset>
+                  <legend class="card-header" style="color: black;">PhotoCloud</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.photocloud" id="photocloud" name="photocloud" type="checkbox" />
+                    <label for="photocloud">PhotoCloud</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend class="card-header" style="color: black;">Emotor</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.emotor" id="emotor" name="emotor" type="checkbox" />
+                    <label for="emotor">Emotor</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend class="card-header" style="color: black;">CLM</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.clm" id="clm" name="clm" type="checkbox" />
+                    <label for="clm">CLM</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend class="card-header" style="color: black;">Fins Finder</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.fins_finder" id="fins_finder" name="fins_finder" type="checkbox" />
+                    <label for="fins_finder">Fins Finder</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend class="card-header" style="color: black;">ACSFI</legend>
+                  <div class="inputGroup">
+                    <input [(ngModel)]="employee.acsfi" id="acsfi" name="acsfi" type="checkbox" />
+                    <label for="acsfi">ACSFI (User Role)</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend class="card-header" style="color: black;">Other</legend>
+                  <div class="inputGroup-text">
+                    <label for="any_other">Any Other:</label>
+                    <input type="text" [(ngModel)]="employee.any_other" id="a" name="any_other" />
+                  </div>
+                </fieldset>
+
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-6 form-action text-center">
+      <button mat-button matStepperPrevious class="btn btn-primary btn-rounded btn-back" style="color: white;">
+        Back <mat-icon>arrow_backward</mat-icon>
+      </button>
+      <button mat-button matStepperNext class="btn btn-primary btn-rounded btn-next" style="color: white; margin-left: 10px;">
+        Next <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+  </div>
+</form>

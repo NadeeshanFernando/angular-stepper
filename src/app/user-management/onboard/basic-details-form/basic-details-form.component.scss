@@ -1,0 +1,37 @@
+/* Style for the form field container */
+.custom-mat-form-field {
+  width: 100%;
+  margin-bottom: 5px;
+  /* Adjust the margin as needed */
+}
+
+/* Style for the input field */
+.mat-input-element {
+  font-size: 14px;
+  /* Adjust the font size as needed */
+  color: #333;
+  /* Text color */
+}
+
+.required:after {
+  content: " *";
+  color: red;
+}
+
+.btn-next {
+  background-color: #007bff;
+  color: #fff; /* Text color is white */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.btn-next:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+// .btn-next mat-icon {
+//   margin-left: 5px; /* Add some space between text and icon */
+// }

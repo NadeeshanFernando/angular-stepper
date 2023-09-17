@@ -1,0 +1,75 @@
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Onboard User</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Onboard User</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+    <div class="container-fluid">
+        <!-- <div class="card"> -->
+
+        <div class="card-body">
+
+            <div>
+                <mat-horizontal-stepper #stepper [selectedIndex]="selectedIndex" [linear]="true">
+
+
+                    <mat-step label="Basic Details" [stepControl]="oneForm">
+                        <app-basic-details-form #one></app-basic-details-form>
+                      </mat-step>
+
+                      <mat-step label="System Access Request" [stepControl]="twoForm">
+                        <app-system-access-form #two></app-system-access-form>
+                      </mat-step>
+
+                      <mat-step label="Application User Access" [stepControl]="thirdForm">
+                        <app-application-user-access-form></app-application-user-access-form>
+                      </mat-step>
+
+                      <mat-step label="Other Support Tool" [stepControl]="fourthForm">
+                        <app-other-support-form></app-other-support-form>
+                      </mat-step>
+
+                      <mat-step label="Done" [stepControl]="fourthForm">
+                        <app-common-success></app-common-success>
+                      </mat-step>
+
+                    <!-- <mat-step>
+                        <ng-template matStepLabel>
+                            <app-common-success></app-common-success>
+                        </ng-template>
+                        Details taken.
+                        <div class="row">
+                            <div class="col-md-6 form-action text-right">
+                                <button mat-button matStepperPrevious class="btn btn-primary btn-rounded">
+                                    <mat-icon>arrow_back</mat-icon> Back
+                                </button>
+                            </div>
+                            <div class="col-md-6 form-action text-left">
+                                <button mat-button (click)="stepper.reset()" class="btn btn-primary btn-rounded">
+                                    Save <mat-icon>done_all</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </mat-step> -->
+                </mat-horizontal-stepper>
+            </div>
+
+        </div>
+        <!-- <div class="card-footer">Footer</div> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+</section>

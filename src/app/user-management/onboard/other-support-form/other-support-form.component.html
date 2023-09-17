@@ -1,0 +1,102 @@
+
+<form role="form">
+<div class="card-body">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-sm-6">
+                    <!-- general form elements disabled -->
+                    <div class="card">
+                        <div class="card-header" style="background-color: #AFDBF5">
+                            <h3 class="card-title" style="font-weight: bold; color: black;">Other Support Tools/Applications</h3>
+                        </div>
+                        <!-- /.card-header -->
+
+                                <div class="card-body">
+
+                                        <div class="inputGroup">
+                                          <input [(ngModel)]="employee.air_watch" id="air_watch" name="air_watch" type="checkbox"/>
+                                          <label for="air_watch">Air Watch (Mobile Mail)</label>
+                                        </div>
+                                        
+                                        <div class="inputGroup">
+                                          <input [(ngModel)]="employee.microsoft_team" id="microsoft_team" name="microsoft_team" type="checkbox"/>
+                                          <label for="microsoft_team">Microsoft Team</label>
+                                        </div>
+
+                                        <div class="inputGroup">
+                                            <input [(ngModel)]="employee.training_access" id="training_access" name="training_access" type="checkbox"/>
+                                            <label for="training_access">Training Access</label>
+                                          </div>
+
+                                          <div class="inputGroup">
+                                            <input [(ngModel)]="employee.intranet_access" id="intranet_access" name="intranet_access" type="checkbox"/>
+                                            <label for="intranet_access">Intranet Access</label>
+                                          </div>
+
+                                          <div class="inputGroup">
+                                            <input [(ngModel)]="employee.servicenow_portal" id="servicenow_portal" name="servicenow_portal" type="checkbox"/>
+                                            <label for="servicenow_portal">ServiceNow Portal</label>
+                                          </div>
+
+                                          <div class="inputGroup">
+                                            <input [(ngModel)]="employee.myallicia_portal" id="myallicia_portal" name="myallicia_portal" type="checkbox"/>
+                                            <label for="myallicia_portal">MyAllicia Portal</label>
+                                          </div>
+
+                                          <div class="inputGroup">
+                                            <input [(ngModel)]="employee.share_folder_access" id="share_folder_access" name="share_folder_access" type="checkbox"/>
+                                            <label for="share_folder_access">Share Folder Access</label>
+                                          </div>
+
+                                </div>
+                                <!-- /.card-body -->
+                        
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+                
+                <!--/.col (left) -->
+                <!-- right column -->
+                <div class="col-sm-6">
+                    <!-- general form elements -->
+                    <div class="card">
+                        <div class="card-header"  style="background-color: #AFDBF5">
+                            <h3 class="card-title" style="font-weight: bold; color: black;">Other Specific Requests/Notes</h3>
+                        </div>
+                            <div class="card-body">
+
+                              <div class="form-group">
+                                <label>Requests/Notes</label>
+                                <textarea class="form-control" rows="3" placeholder="type here..."></textarea>
+                              </div>
+
+                            </div>
+                            <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+
+    </section>
+</div>
+<div class="row align-items-center justify-content-center">
+  <div class="col-md-6 form-action text-center">
+    <button mat-button matStepperPrevious class="btn btn-primary btn-rounded btn-back" style="color: white;">
+      Back <mat-icon>arrow_backward</mat-icon>
+    </button>
+    <button mat-button matStepperNext class="btn btn-primary btn-rounded btn-next" style="color: white; margin-left: 10px;">
+      Next <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+</div>
+</form>
+
+

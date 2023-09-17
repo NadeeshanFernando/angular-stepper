@@ -1,0 +1,25 @@
+<div class="view">
+    <div>
+        <!-- <div style="border-radius: 200px; height: 200px; width: 200px; background: #F8FAF5; margin: 0 auto;">
+            <img src="../../../assets/gif/successful.gif" alt="Success GIF">
+        </div> -->
+        <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+            <i class="checkmark">✓</i>
+          </div>
+        <h1>Success</h1>
+        <p>{{msg1}}<br /> {{msg2}}</p>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6 form-action text-right">
+            <button mat-button matStepperPrevious class="btn btn-primary btn-rounded btn-back" style="color: white;">
+                <mat-icon>arrow_back</mat-icon> Back
+            </button>
+        </div>
+        <div class="col-md-6 form-action text-left">
+            <button mat-button (click)="stepper.reset()" class="btn btn-primary btn-rounded btn-save" style="color: white;">
+                Save <mat-icon>done_all</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

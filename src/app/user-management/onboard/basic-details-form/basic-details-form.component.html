@@ -1,0 +1,144 @@
+<form role="form" [formGroup]="form">
+
+    <div class="card-body">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!-- left column -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" style="background-color: #AFDBF5">
+                                <h3 class="card-title" style="font-weight: bold; color: black;">Employee Details</h3>
+                            </div>
+                            <div class="card-body" style="margin-top: -20px;">
+
+                                <div class="card-body">
+                                    <label for="epf_no" class="required">EPF Number</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="EPF number" formControlName="epf_no" type="text"
+                                            [(ngModel)]="employee.epf_no">
+                                        <mat-error *ngIf="form.get('epf_no').hasError('requireEpfNo')">EPF Number is required</mat-error>
+                                        <mat-error *ngIf="form.get('epf_no').hasError('invalidEpfNo')">Invalid EPF number format</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="company" class="required">Company</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="Company" formControlName="company" type="text"
+                                            [(ngModel)]="employee.company">
+                                            <mat-error *ngIf="form.get('company').hasError('requireCompany')">Company is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="branch" class="required">Branch</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="Branch" formControlName="branch" type="text"
+                                            [(ngModel)]="employee.branch">
+                                            <mat-error *ngIf="form.get('branch').hasError('requireBranch')">Branch is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="department" class="required">Department</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="Department" formControlName="department" type="text"
+                                            [(ngModel)]="employee.department">
+                                            <mat-error *ngIf="form.get('department').hasError('requireDepartment')">Department is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="designation" class="required">Designation</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="Designation" formControlName="designation" type="text"
+                                            [(ngModel)]="employee.designation">
+                                            <mat-error *ngIf="form.get('designation').hasError('requireDesignation')">Designation is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="grade" class="required">Grade</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="Grade" formControlName="grade" type="text"
+                                            [(ngModel)]="employee.grade">
+                                            <mat-error *ngIf="form.get('grade').hasError('requireGrade')">Grade is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="date_of_joining" class="required">Date of Joining</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="Date of Joining" formControlName="date_of_joining" type="datetime"
+                                            [(ngModel)]="employee.date_of_joining">
+                                            <mat-error *ngIf="form.get('date_of_joining').hasError('requireDateOfJoining')">Date of Joining is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="hod_name" class="required">HOD Name</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="HOD Name" formControlName="hod_name" type="text"
+                                            [(ngModel)]="employee.hod_name">
+                                            <mat-error *ngIf="form.get('hod_name').hasError('requireHodName')">HOD Name is required</mat-error>
+                                    </mat-form-field>
+
+                                    <label for="epf_no_of_hod" class="required">EPF of HOD</label>
+                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                        <input matInput placeholder="EPF of HOD" formControlName="epf_no_of_hod" type="text"
+                                            [(ngModel)]="employee.epf_no_of_hod">
+                                            <mat-error *ngIf="form.get('epf_no_of_hod').hasError('requireEpfNoOfHod')">EPF of HOD is required</mat-error>
+                                    </mat-form-field>
+                                
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right column -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header" style="background-color: #AFDBF5">
+                                <h3 class="card-title" style="font-weight: bold; color: black;">User Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" [(ngModel)]="employee.first_name" class="form-control"
+                                        id="first_name" name="first_name" placeholder="first name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="middle_name">Middle Name</label>
+                                    <input type="text" [(ngModel)]="employee.middle_name" class="form-control"
+                                        id="middle_name" name="middle_name" placeholder="middle name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" [(ngModel)]="employee.last_name" class="form-control"
+                                        id="last_name" name="last_name" placeholder="last name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile_no">Mobile Number</label>
+                                    <input type="text" [(ngModel)]="employee.mobile_no" class="form-control"
+                                        id="mobile_no" name="mobile_no" placeholder="mobile name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">User Photo Upload</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">Choose
+                                                file</label>
+                                        </div>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="">Upload</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-6 form-action text-center">
+            <button mat-button matStepperNext class="btn btn-primary btn-rounded btn-next" style="color: white;">
+                Next <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </div>
+    </div>
+</form>

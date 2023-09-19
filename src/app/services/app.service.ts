@@ -4,6 +4,7 @@ import {ToastrService} from 'ngx-toastr';
 import {Gatekeeper} from 'gatekeeper-client-sdk';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { BehaviorSubject, of } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -26,16 +27,16 @@ export class AppService {
     //     }
     // }
 
-    async loginByAuth({email, password}){
+    async login({email, password}){
         // eve.holt@reqres.in
         // cityslicka
         try{
             const response = await this.http.post(`${this.baseUrl}`, { email, password }).toPromise();
             const token = response['token'];
             localStorage.setItem('token', token);
-            await this.getProfile();
+            // await this.getProfile();
             this.router.navigate(['/']);
-            this.toastr.success('Login success');
+            // this.toastr.success('Login success');
         }catch (error) {
             this.toastr.error(error.message);
         }
@@ -65,8 +66,26 @@ export class AppService {
 
     logout() {
         localStorage.removeItem('token');
-        localStorage.removeItem('gatekeeper_token');
         this.user = null;
         this.router.navigate(['/login']);
     }
+
+    // isLoggedIn() {
+    //     try {
+    //         this.user = localStorage.getItem('token');
+    //     } catch (error) {
+    //         this.logout();
+    //         throw error;
+    //     }
+    //   }
+
+    isLoggedIn():boolean  {
+        if(localStorage.getItem('token')){
+            this.user = localStorage.getItem('token');
+            return true;
+        }else{
+            this.logout()
+            return false;
+        }
+      }
 }

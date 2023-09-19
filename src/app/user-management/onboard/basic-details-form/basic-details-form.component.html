@@ -14,70 +14,117 @@
                             <div class="card-body" style="margin-top: -20px;">
 
                                 <div class="card-body">
+
                                     <label for="epf_no" class="required">EPF Number</label>
                                     <mat-form-field appearance="outline" class="custom-mat-form-field">
                                         <input matInput placeholder="EPF number" formControlName="epf_no" type="text"
                                             [(ngModel)]="employee.epf_no">
-                                        <mat-error *ngIf="form.get('epf_no').hasError('requireEpfNo')">EPF Number is required</mat-error>
-                                        <mat-error *ngIf="form.get('epf_no').hasError('invalidEpfNo')">Invalid EPF number format</mat-error>
+                                        <mat-error *ngIf="form.get('epf_no').hasError('requireEpfNo')">EPF Number is
+                                            required</mat-error>
+                                        <mat-error *ngIf="form.get('epf_no').hasError('invalidEpfNo')">Invalid EPF
+                                            number format</mat-error>
+                                        <mat-error *ngIf="form.get('epf_no').hasError('wrongEpfNo')">EPF Number has
+                                            exactly 10 characters</mat-error>
                                     </mat-form-field>
 
                                     <label for="company" class="required">Company</label>
                                     <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="Company" formControlName="company" type="text"
-                                            [(ngModel)]="employee.company">
-                                            <mat-error *ngIf="form.get('company').hasError('requireCompany')">Company is required</mat-error>
-                                    </mat-form-field>
+                                        <mat-select matInput matNativeControl formControlName="company">
+                                          <mat-option value="" disabled selected hidden>Select Company</mat-option>
+                                          <mat-option value="option 1">option 1</mat-option>
+                                          <mat-option value="option 2">option 2</mat-option>
+                                          <mat-option value="option 3">option 3</mat-option>
+                                          <mat-option value="option 4">option 4</mat-option>
+                                          <mat-option value="option 5">option 5</mat-option>
+                                        </mat-select>
+                                        <mat-error *ngIf="form.get('company').hasError('requireCompany')">Company is required</mat-error>
+                                      </mat-form-field>
 
-                                    <label for="branch" class="required">Branch</label>
+                                    <!-- <label for="company" class="required">Company</label>
                                     <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="Branch" formControlName="branch" type="text"
-                                            [(ngModel)]="employee.branch">
-                                            <mat-error *ngIf="form.get('branch').hasError('requireBranch')">Branch is required</mat-error>
-                                    </mat-form-field>
+                                        <select>
+                                            <option value="" disabled selected hidden>Select Company</option>
+                                            <option>option 1</option>
+                                            <option>option 2</option>
+                                            <option>option 3</option>
+                                            <option>option 4</option>
+                                            <option>option 5</option>  
+                                        </select>
+                                    </mat-form-field> -->
 
-                                    <label for="department" class="required">Department</label>
-                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="Department" formControlName="department" type="text"
-                                            [(ngModel)]="employee.department">
-                                            <mat-error *ngIf="form.get('department').hasError('requireDepartment')">Department is required</mat-error>
-                                    </mat-form-field>
 
-                                    <label for="designation" class="required">Designation</label>
-                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="Designation" formControlName="designation" type="text"
-                                            [(ngModel)]="employee.designation">
-                                            <mat-error *ngIf="form.get('designation').hasError('requireDesignation')">Designation is required</mat-error>
-                                    </mat-form-field>
+                                    <label for="department">Branch</label>
+                                    <select class="form-control" required>
+                                        <option value="" disabled selected hidden>Select Branch</option>
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                    <br>
+                                    <label for="department">Department</label>
+                                    <select class="form-control" required>
+                                        <option value="" disabled selected hidden>Select Department</option>
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                    <br>
 
-                                    <label for="grade" class="required">Grade</label>
-                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="Grade" formControlName="grade" type="text"
-                                            [(ngModel)]="employee.grade">
-                                            <mat-error *ngIf="form.get('grade').hasError('requireGrade')">Grade is required</mat-error>
-                                    </mat-form-field>
+                                    <label for="designation">Designation</label>
+                                    <select class="form-control">
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                    <br>
+
+                                    <label for="grade">Grade</label>
+                                    <select class="form-control">
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                    <br>
 
                                     <label for="date_of_joining" class="required">Date of Joining</label>
                                     <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="Date of Joining" formControlName="date_of_joining" type="datetime"
-                                            [(ngModel)]="employee.date_of_joining">
-                                            <mat-error *ngIf="form.get('date_of_joining').hasError('requireDateOfJoining')">Date of Joining is required</mat-error>
+                                        <input matInput readonly placeholder="Date of Joining" formControlName="date_of_joining"
+                                        [matDatepicker]="picker" [(ngModel)]="employee.date_of_joining">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                        <mat-error
+                                            *ngIf="form.get('date_of_joining').hasError('requireDateOfJoining')">Date of
+                                            Joining is required</mat-error>
                                     </mat-form-field>
 
-                                    <label for="hod_name" class="required">HOD Name</label>
-                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="HOD Name" formControlName="hod_name" type="text"
-                                            [(ngModel)]="employee.hod_name">
-                                            <mat-error *ngIf="form.get('hod_name').hasError('requireHodName')">HOD Name is required</mat-error>
-                                    </mat-form-field>
+                                    <label for="hod_name">HOD Name</label>
+                                    <select class="form-control">
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                    <br>
 
-                                    <label for="epf_no_of_hod" class="required">EPF of HOD</label>
-                                    <mat-form-field appearance="outline" class="custom-mat-form-field">
-                                        <input matInput placeholder="EPF of HOD" formControlName="epf_no_of_hod" type="text"
-                                            [(ngModel)]="employee.epf_no_of_hod">
-                                            <mat-error *ngIf="form.get('epf_no_of_hod').hasError('requireEpfNoOfHod')">EPF of HOD is required</mat-error>
-                                    </mat-form-field>
-                                
+                                    <label for="epf_no_of_hod">EPF of HOD</label>
+                                    <select class="form-control">
+                                        <option>option 1</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                    <br>
+
                                 </div>
 
                             </div>
@@ -91,26 +138,55 @@
                                 <h3 class="card-title" style="font-weight: bold; color: black;">User Details</h3>
                             </div>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="first_name">First Name</label>
-                                    <input type="text" [(ngModel)]="employee.first_name" class="form-control"
-                                        id="first_name" name="first_name" placeholder="first name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="middle_name">Middle Name</label>
-                                    <input type="text" [(ngModel)]="employee.middle_name" class="form-control"
-                                        id="middle_name" name="middle_name" placeholder="middle name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="last_name">Last Name</label>
-                                    <input type="text" [(ngModel)]="employee.last_name" class="form-control"
-                                        id="last_name" name="last_name" placeholder="last name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mobile_no">Mobile Number</label>
-                                    <input type="text" [(ngModel)]="employee.mobile_no" class="form-control"
-                                        id="mobile_no" name="mobile_no" placeholder="mobile name">
-                                </div>
+                                <label for="first_name" class="required">First Name</label>
+                                <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                    <input matInput placeholder="First name" formControlName="first_name" type="text"
+                                        [(ngModel)]="employee.first_name">
+                                    <mat-error *ngIf="form.get('first_name').hasError('requireFirstName')">First name is
+                                        required</mat-error>
+                                    <mat-error *ngIf="form.get('first_name').hasError('WrongFirstName')">The minimum
+                                        number of characters is 3 </mat-error>
+                                    <mat-error *ngIf="form.get('first_name').hasError('ErrorFirstName')">The maximum
+                                        number of characters is 15 </mat-error>
+
+                                </mat-form-field>
+
+                                <label for="middle_name" class="required">Middle Name</label>
+                                <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                    <input matInput placeholder="Middle name" formControlName="middle_name" type="text"
+                                        [(ngModel)]="employee.middle_name">
+                                    <mat-error *ngIf="form.get('middle_name').hasError('requireMiddleName')">Middle name
+                                        is required</mat-error>
+                                    <mat-error *ngIf="form.get('middle_name').hasError('WrongFirstName')">The minimum
+                                        number of characters is 3 </mat-error>
+                                    <mat-error *ngIf="form.get('middle_name').hasError('ErrorFirstName')">The maximum
+                                        number of characters is 15 </mat-error>
+                                </mat-form-field>
+
+                                <label for="last_name" class="required">Last Name</label>
+                                <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                    <input matInput placeholder="Last name" formControlName="last_name" type="text"
+                                        [(ngModel)]="employee.last_name">
+                                    <mat-error *ngIf="form.get('last_name').hasError('requireLastName')">Last name is
+                                        required</mat-error>
+                                    <mat-error *ngIf="form.get('last_name').hasError('WrongFirstName')">The minimum
+                                        number of characters is 3 </mat-error>
+                                    <mat-error *ngIf="form.get('last_name').hasError('ErrorFirstName')">The maximum
+                                        number of characters is 15 </mat-error>
+                                </mat-form-field>
+
+                                <label for="mobile_no" class="required">Mobile Number</label>
+                                <mat-form-field appearance="outline" class="custom-mat-form-field">
+                                    <input matInput placeholder="Mobile number" formControlName="mobile_no" type="text"
+                                        [(ngModel)]="employee.mobile_no">
+                                    <mat-error *ngIf="form.get('mobile_no').hasError('requireMobileNumber')">Mobile
+                                        number is required</mat-error>
+                                    <mat-error *ngIf="form.get('mobile_no').hasError('invalidMobileNumber')">Invalid
+                                        Mobile number format</mat-error>
+                                    <mat-error *ngIf="form.get('mobile_no').hasError('wrongMobileNumber')">Mobile Number
+                                        has exactly 10 characters</mat-error>
+                                </mat-form-field>
+
                                 <div class="form-group">
                                     <label for="exampleInputFile">User Photo Upload</label>
                                     <div class="input-group">
@@ -122,7 +198,10 @@
                                         <div class="input-group-append">
                                             <span class="input-group-text" id="">Upload</span>
                                         </div>
+
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -130,9 +209,7 @@
 
                 </div>
             </div>
-
         </section>
-
     </div>
     <div class="row align-items-center justify-content-center">
         <div class="col-md-6 form-action text-center">

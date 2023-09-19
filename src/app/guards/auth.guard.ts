@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
     CanActivate,
     CanActivateChild,
@@ -7,14 +7,14 @@ import {
     UrlTree,
     Router
 } from '@angular/router';
-import {Observable} from 'rxjs';
-import {AppService} from '@services/app.service';
+import { Observable } from 'rxjs';
+import { AppService } from '@services/app.service';
 
 @Injectable({
     providedIn: 'root'
 })
 export class AuthGuard implements CanActivate, CanActivateChild {
-    constructor(private router: Router, private appService: AppService) {}
+    constructor(private router: Router, private appService: AppService) { }
 
     canActivate(
         next: ActivatedRouteSnapshot,
@@ -50,4 +50,18 @@ export class AuthGuard implements CanActivate, CanActivateChild {
             return false;
         }
     }
+
+    async checkToken() {
+        const token = localStorage.getItem('token');
+        if (token) {
+            // Token exists, allow access to the route
+            return true;
+        } else {
+            // No token, redirect to the login page and deny access
+            this.router.navigate(['/login']);
+            return false;
+        }
+    }
+
+    
 }

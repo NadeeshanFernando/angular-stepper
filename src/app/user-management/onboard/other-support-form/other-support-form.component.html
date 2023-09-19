@@ -1,5 +1,5 @@
 
-<form role="form">
+<form role="form" [formGroup]="form">
 <div class="card-body">
     <section class="content">
         <div class="container-fluid">
@@ -68,12 +68,13 @@
                             <h3 class="card-title" style="font-weight: bold; color: black;">Other Specific Requests/Notes</h3>
                         </div>
                             <div class="card-body">
-
                               <div class="form-group">
                                 <label>Requests/Notes</label>
+                                <!-- <mat-form-field appearance="outline" class="custom-mat-form-field"> -->
                                 <textarea class="form-control" rows="3" placeholder="type here..."></textarea>
+                                 
+                                  <div *ngIf="form.get('any_other').hasError('invalidTextArea')">Maximum character length is 100</div>                
                               </div>
-
                             </div>
                             <!-- /.card-body -->
                     </div>

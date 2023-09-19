@@ -23,7 +23,7 @@ export class BasicDetailsFormComponent implements OnInit{
   ngOnInit() {
     this.form = this.formBuilder.group({
       epf_no: ['', [GenericValidator.common]],
-      company: ['', [GenericValidator.common]],
+      company: ['', [GenericValidator.company]],
       branch: ['', [GenericValidator.common]],
       department: ['', [GenericValidator.common]],
       designation: ['', [GenericValidator.common]],
@@ -31,6 +31,11 @@ export class BasicDetailsFormComponent implements OnInit{
       date_of_joining: ['', [GenericValidator.common]],
       hod_name: ['', [GenericValidator.common]],
       epf_no_of_hod: ['', [GenericValidator.common]],
+      first_name: ['', [GenericValidator.common]],
+      middle_name: ['', [GenericValidator.common]],
+      last_name: ['', [GenericValidator.common]],
+      mobile_no: ['', [GenericValidator.common]],
+      photo: ['', [GenericValidator.common]],
     });
   }
 

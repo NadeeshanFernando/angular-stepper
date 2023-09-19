@@ -40,8 +40,12 @@ import { MatStepperModule } from "@angular/material/stepper";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from '@angular/material/icon';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { CommonSuccessComponent } from './success_messages/common-success/common-success.component';
+import { MatOption } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -75,10 +79,14 @@ registerLocaleData(localeEn, 'en-EN');
         ProfabricComponentsModule,
         CommonModule,
         MatStepperModule,
+        MatOptionModule,
         MatInputModule,
         MatButtonModule,
+        MatSelectModule,
         MatIconModule,
         MatCardModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
         FormsModule,
         BrowserModule,
         StoreModule.forRoot({auth: authReducer, ui: uiReducer}),
